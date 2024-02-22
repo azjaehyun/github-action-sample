@@ -34,7 +34,7 @@ jobs:
     #     dockerfile: Dockerfile
 
     - name: Build Docker image
-      run: docker build -f .  -t symjaehyun/github-action-spring-test:latest
+      run: docker build  .  -t symjaehyun/github-action-spring-test:latest
 
     - name: Log in to Docker Hub
       run: docker login -u symjaehyun -p ${{ secrets.DOCKERHUB_TOKEN }}
