@@ -35,10 +35,10 @@ jobs:
     - name: Push Docker image to Docker Hub
       run: docker push your-docker-username/your-image-name:latest
 
-    - name: Set up kubectl
-      uses: steebchen/kubectl@v1
-      with:
-        kube_config_data: ${{ secrets.KUBE_CONFIG_DATA }}
+    # - name: Set up kubectl
+    #   uses: steebchen/kubectl@v1
+    #   with:
+    #     kube_config_data: ${{ secrets.KUBE_CONFIG_DATA }}
 
-    - name: Deploy to Kubernetes
-      run: kubectl apply -f deployment.yaml
+    # - name: Deploy to Kubernetes
+    #   run: kubectl apply -f deployment.yaml
