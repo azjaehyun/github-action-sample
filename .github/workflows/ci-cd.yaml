@@ -24,7 +24,7 @@ jobs:
     - name: Set up Docker
       uses: actions/setup-docker@v2
       with:
-        dockerfile: Dockerfile
+        dockerfile: ./spring-init/Dockerfile
 
     - name: Build Docker image
       run: docker build -f ./spring-init/Dockerfile -t your-docker-username/your-image-name:latest
